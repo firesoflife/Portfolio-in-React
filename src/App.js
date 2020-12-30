@@ -1,56 +1,40 @@
-import React, { Fragment, Component } from 'react';
+// Import Tools
+import React, { Component } from 'react';
 import '../src/sass/App.scss';
-import About from './pages/About';
-import Blog from './pages/Blog';
-import Navbar from './components/Navbar';
-import Header from './pages/Header';
-import Specialties from './pages/Specialties';
-import Projects from './pages/Projects';
-import Knowledge from './pages/Knowledge';
-import Contact from './pages/Contact';
-import Footer from './components/Footer';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+// Import Pages & Components
+
 import Construction from './pages/Construction';
+
+// Import Layouts
+import mainPage from './components/Layouts';
+import ScrollToTopOnMount from './components/ScrollToTop';
+import history from './components/History';
+
+const comingSoon = () => {
+  return (
+    <div>
+      <Construction />
+    </div>
+  );
+};
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
-          <Navbar />
-          <Header />
-          <Switch>
-            {/* <Route path="/Header" component={Header} /> */}
-            <Route
-              path="/Header"
-              render={(props) => (
-                <Fragment>
-                  {/* <Header /> */}
-                  <Specialties />
-                  <Projects />
-                  <Contact />
-                </Fragment>
-              )}
-            />
-            <Route
-              path="/Specialties"
-              render={(props) => (
-                <Fragment>
-                  {/* <Header /> */}
+        <Switch>
+          <Route exact path="/">
+            {mainPage}
+          </Route>
+          <Route path="..." children={<mainPage />} />
 
-                  <Specialties />
-                  <Projects />
-                  <Contact />
-                </Fragment>
-              )}
-            />
-            <Route path="/Projects" component={Projects} />
-            <Route path="/Contact" component={Contact} />
-            <Route path="/About" component={About} />
-            <Route path="/Blog" component={Blog} />
-          </Switch>
-          <Footer />
-        </div>
+          <Route path="/specialties">{mainPage}</Route>
+          <Route path="/projects">{mainPage}</Route>
+          <Route path="/contact">{mainPage}</Route>
+          <Route exact path="/construction" component={comingSoon} />
+        </Switch>
       </Router>
     );
   }

@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { ScrollTotopOnMount } from 'react';
 import '../sass/App.scss';
 
-function Specialties() {
+// import ScrollableSection from 'react-update-url-on-scroll';
+
+const Specialties = () => {
   return (
     <div>
+      {/* <ScrollTotopOnMount /> */}
       {/* <!-- SECTION A: SPECIALTIES --> */}
-      <section className="home-a" id="specialties">
+      <section className="home-a" id="specialties" name={'specialties'}>
         <div className="container">
           {/* <!-- Section Titles Start --> */}
           <div className="section__title--container">
@@ -138,6 +141,6 @@ function Specialties() {
       </section>
     </div>
   );
-}
+};
 
 export default Specialties;

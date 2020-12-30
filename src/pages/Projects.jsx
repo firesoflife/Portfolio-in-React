@@ -1,10 +1,13 @@
 import React from 'react';
 import '../sass/App.scss';
+import ScrollTotopOnMount from 'react';
+// import ScrollableSection from 'react-update-url-on-scroll';
 
-function Projects() {
+const Projects = () => {
   return (
     <div>
-      <section className="home-b" id="projects">
+      {/* <ScrollTotopOnMount /> */}
+      <section className="home-b" id="projects" name={'projects'}>
         <div className="container">
           {/* <!-- Section Titles Start --> */}
           <div className="section__title--container">
@@ -41,7 +44,7 @@ function Projects() {
                   <a
                     href="https://wovencollections.com"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
                     <div className="btn-project">Visit Site</div>
                   </a>
@@ -96,7 +99,7 @@ function Projects() {
                   <a
                     href="https://dev-mountain-calm-realty.pantheonsite.io"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
                     <div className="btn-project">Visit Site</div>
                   </a>
@@ -193,7 +196,7 @@ function Projects() {
                 </div>
                 <div className="gallery__info--text">
                   <p>
-                    coded under the design and directin of Jonas Schmedtmann
+                    coded under the design and direction of Jonas Schmedtmann
                   </p>
                   <a href="Omnifood/index.html" target="_blank">
                     <div className="btn-project">Visit Site</div>
@@ -230,6 +233,6 @@ function Projects() {
       </section>
     </div>
   );
-}
+};
 
 export default Projects;

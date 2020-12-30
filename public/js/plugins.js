@@ -1,28 +1,28 @@
 'use strict';
 
 //      TRANSPARENT MENU ON SCROLL
-let scrollPos = window.scrollY;
-const navBar = document.getElementById('main-nav');
-console.log();
-const position = 300;
+// let scrollPos = window.scrollY;
+// const navBar = document.getElementById('main-nav');
+// console.log();
+// const position = 300;
 
-const addTransparent = () => navBar.classList.add('transparent');
-const removeSolid = () => navBar.classList.remove('solid');
+// const addTransparent = () => navBar.classList.add('transparent');
+// const removeSolid = () => navBar.classList.remove('solid');
 
-const addSolid = () => navBar.classList.add('solid');
-const removeTransparent = () => navBar.classList.remove('transparent');
+// const addSolid = () => navBar.classList.add('solid');
+// const removeTransparent = () => navBar.classList.remove('transparent');
 
-window.addEventListener('scroll', function () {
-  scrollPos = window.scrollY;
+// window.addEventListener('scroll', function () {
+//   scrollPos = window.scrollY;
 
-  if (scrollPos >= position) {
-    removeTransparent();
-    addSolid();
-  } else {
-    removeSolid();
-    addTransparent();
-  }
-});
+//   if (scrollPos >= position) {
+//     removeTransparent();
+//     addSolid();
+//   } else {
+//     removeSolid();
+//     addTransparent();
+//   }
+// });
 
 //        SCROLLSPY with IntersectionObserver
 

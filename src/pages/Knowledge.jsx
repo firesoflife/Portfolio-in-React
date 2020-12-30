@@ -1,7 +1,7 @@
 import React from 'react';
 import '../sass/App.scss';
 
-function Knowledge() {
+const Knowledge = () => {
   return (
     <section className="home-c" id="home-c">
       {/* <!-- Section Title Start --> */}
@@ -28,6 +28,6 @@ function Knowledge() {
       </div>
     </section>
   );
-}
+};
 
 export default Knowledge;

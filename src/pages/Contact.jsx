@@ -1,10 +1,14 @@
 import React from 'react';
 import '../sass/App.scss';
+import ScrollTotopOnMount from 'react';
 
-function Contact() {
+// import ScrollableSection from 'react-update-url-on-scroll';
+
+const Contact = () => {
   return (
     <div>
-      <section className="home-d" id="contact">
+      {/* <ScrollTotopOnMount /> */}
+      <section className="home-d" id="contact" name={'contact'}>
         {/* <!-- Section Titles Start --> */}
         <div className="section__title--container">
           <h2 className="section__title--a">
@@ -54,7 +58,7 @@ function Contact() {
                   href="https://www.linkedin.com/in/bryan-goertz/"
                   className="contact__item"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <li>
                     <ion-icon name="logo-linkedin"></ion-icon>
@@ -65,7 +69,7 @@ function Contact() {
                   href="https://github.com/firesoflife"
                   className="contact__item"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <li>
                     <ion-icon name="logo-github"></ion-icon>
@@ -76,7 +80,7 @@ function Contact() {
                   href="https://www.instagram.com/bryangoertz/"
                   className="contact__item"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <li>
                     <ion-icon name="logo-instagram"></ion-icon>
@@ -87,7 +91,7 @@ function Contact() {
                   href="https://www.facebook.com/bryan.d.goertz"
                   className="contact__item"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <li>
                     <ion-icon name="logo-facebook"></ion-icon>
@@ -169,6 +173,6 @@ function Contact() {
       </section>
     </div>
   );
-}
+};
 
 export default Contact;

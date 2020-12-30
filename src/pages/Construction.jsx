@@ -1,7 +1,7 @@
 import React from 'react';
 import '../sass/App.scss';
 
-function Construction() {
+const Construction = () => {
   return (
     <div>
       <section class="wrapper">
@@ -11,6 +11,6 @@ function Construction() {
       </section>
     </div>
   );
-}
+};
 
 export default Construction;
