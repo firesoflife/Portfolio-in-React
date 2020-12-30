@@ -2,7 +2,7 @@
 
 ## Design and methodolgy
 
-### The Site should have the following pages:
+## The Site should have the following pages:
 
 - Home / Header _(Nav item)_
 - Specialties _(Nav item)_
@@ -12,7 +12,9 @@
 - About - _(Nav item)_ link to separate "page"/layout
 - Blog - _(Nav item)_ link to separate "page"/layout
 
-## The site should have a main section that render when the page is loaded with the following
+---
+
+### The site should have a main section that render when the page is loaded with the following
 
         <Navbar />
         <Header />
@@ -24,28 +26,30 @@
 
 ## The above listed components should render on the following Routes:
 
-### This is working correctly (except the home route which gets confused with the "/" route) - the layout is stored in a 'mainPage' variable in the layouts component.
+        /home
+        /specialties
+        /projects
+        /contact
 
-/home
-/specialties
-/projects
-/contact
+### This is working correctly (except the home route which gets confused with the "/" route) - the layout is stored in a 'mainPage' variable in the layouts component.
 
 ---
 
-## These components should render their own "pages"/layouts
+## The following components should render their own "pages"/layouts
 
 ### currently they route to a "coming soon" component named "Construction"
 
-<About /> Route to=/about component={Construction}
-<Blog /> Route to=/blog component={Construction}
-<Knowledge /> Route to=/about component={Construction}
+        <About /> Route to=/about component={Construction}
+        <Blog /> Route to=/blog component={Construction}
+        <Knowledge /> Route to=/about component={Construction}
 
 _These will be updated to their appropriate components when they've been completed_
 
+## Bugs and Attempted Solutions
+
 ### Issue 1: Links change url on click but do not navigate to location in layout
 
-The links <NavLink> items update the url onClick and take on the `activeClassName="active"`
+The links `<NavLink>` items update the url onClick and take on the `activeClassName="active"`
 
 They do not navigate the layout to the correct page in the layout
 
@@ -56,7 +60,7 @@ example: loading page renders http://localhost:3000/ and {mainPage} renders. Scr
 I had this working for a while using the following package package:
 `import ScrollableSection from 'react-update-url-on-scroll/lib/ScrollableSection'`
 
-it worked when all <section> tags were changed to <ScrollableSection>
+it worked when all `<section>` tags were changed to `<ScrollableSection>`
 
 ### Issue 3: The navigation should utelize smooth scroll instead of jumping to the section
 
