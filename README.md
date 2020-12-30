@@ -14,12 +14,13 @@
 
 ## The site should have a main section that render when the page is loaded with the following
 
-- <Navbar />
-- <Header />
-- <Specialties />
-- [<Projects /> <Knowledge />]
-- <Contact />
-- <Footer />
+        <Navbar />
+        <Header />
+        <Specialties />
+        <Projects />
+        <Knowledge />
+        <Contact />
+        <Footer />
 
 ## The above listed components should render on the following Routes:
 
